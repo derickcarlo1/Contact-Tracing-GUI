@@ -24,6 +24,24 @@ def save_data():
     messagebox.showinfo("Success", "Data saved successfully!")
 
 # Function to search for an entry by name and display the information
+def search_data():
+    name_to_search = name_var.get()
+    found = False
+    with open("contact_tracing.txt", "r") as file:
+        lines = file.readlines()
+        data = ""
+        for i in range(len(lines)):
+            if lines[i].strip() == f"Name: {name_to_search}":
+                found = True
+                for j in range(i, i + 7):
+                    data += lines[j]
+                break
+
+    if found:
+        search_result_text.delete("1.0", tk.END)
+        search_result_text.insert(tk.END, data)
+    else:
+        messagebox.showinfo("Not Found", "Entry not found!")
 
 # Create the main app window
 app = tk.Tk()
