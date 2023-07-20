@@ -49,8 +49,19 @@ app.title("Contact Tracing App")
 app.geometry("600x600")
 
 # Background Image
+bg_image = Image.open("backgroundct.png")
+bg_photo = ImageTk.PhotoImage(bg_image)
+bg_label = tk.Label(app, image=bg_photo)
+bg_label.place(x=0, y=0, relwidth=1, relheight=1)
 
 # Variables for user information
+name_var = tk.StringVar()
+age_var = tk.StringVar()
+gender_var = tk.StringVar()
+contact_var = tk.StringVar()
+address_var = tk.StringVar()
+travel_history_var = tk.StringVar()
+symptoms_var = tk.StringVar()
 
 # User Information Input
 
