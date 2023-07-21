@@ -92,8 +92,8 @@ address_entry.pack()
 
 travel_history_label = tk.Label(app, text="Travel History:")
 travel_history_label.pack()
-travel_history_var = ["Yes", "No"]
-travel_history_choices.set(travel_history_choices[1])  # Default choice
+travel_history_choices = ["Yes", "No"]
+travel_history_var.set(travel_history_choices[1])  # Default choice
 travel_history_menu = tk.OptionMenu(app, travel_history_var, *travel_history_choices)
 travel_history_menu.pack()
 
@@ -116,5 +116,8 @@ search_button = tk.Button(app, text="Search", command=search_data)
 search_button.pack()
 
 # Search Result
+search_result_text = tk.Text(app, width=60, height=10)
+search_result_text.pack()
 
 # Run the main loop
+app.mainloop()
