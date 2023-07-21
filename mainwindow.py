@@ -103,6 +103,8 @@ symptoms_entry = tk.Entry(app, textvariable=symptoms_var)
 symptoms_entry.pack()
 
 # Save Button
+save_button = tk.Button(app, text="Save Data", command=save_data)
+save_button.pack()
 
 # Search Entry
 
