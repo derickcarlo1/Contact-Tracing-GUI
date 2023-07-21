@@ -64,6 +64,43 @@ travel_history_var = tk.StringVar()
 symptoms_var = tk.StringVar()
 
 # User Information Input
+name_label = tk.Label(app, text="Name:")
+name_label.pack()
+name_entry = tk.Entry(app, textvariable=name_var)
+name_entry.pack()
+
+name_label = tk.Label(app, text="Name:")
+name_label.pack()
+name_entry = tk.Entry(app, textvariable=name_var)
+name_entry.pack()
+
+gender_label = tk.Label(app, text="Gender:")
+gender_label.pack()
+gender_choices = ["Male", "Female", "Other"]
+gender_var.set(gender_choices[0])  # Default choice
+gender_menu = tk.OptionMenu(app, gender_var, *gender_choices)
+gender_menu.pack()
+
+contact_label = tk.Label(app, text="Contact:")
+contact_label.pack()
+contact_entry = tk.Entry(app, textvariable=contact_var)
+contact_entry.pack()
+address_label = tk.Label(app, text="Address:")
+address_label.pack()
+address_entry = tk.Entry(app, textvariable=address_var)
+address_entry.pack()
+
+travel_history_label = tk.Label(app, text="Travel History:")
+travel_history_label.pack()
+travel_history_var = ["Yes", "No"]
+travel_history_choices.set(travel_history_choices[1])  # Default choice
+travel_history_menu = tk.OptionMenu(app, travel_history_var, *travel_history_choices)
+travel_history_menu.pack()
+
+symptoms_label = tk.Label(app, text="Symptoms:")
+symptoms_label.pack()
+symptoms_entry = tk.Entry(app, textvariable=symptoms_var)
+symptoms_entry.pack()
 
 # Save Button
 
