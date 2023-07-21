@@ -107,6 +107,13 @@ save_button = tk.Button(app, text="Save Data", command=save_data)
 save_button.pack()
 
 # Search Entry
+search_label = tk.Label(app, text="Search by Name:")
+search_label.pack()
+search_entry = tk.Entry(app, textvariable=name_var)
+search_entry.pack()
+
+search_button = tk.Button(app, text="Search", command=search_data)
+search_button.pack()
 
 # Search Result
 
